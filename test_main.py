@@ -2,6 +2,9 @@ import unittest
 import main as script
 
 class BaseTests(unittest.TestCase):
+    '''
+    Base test class for Doppler integration.
+    '''
     def test_get_env(self):
         '''
         Testing to confirm doppler secret
@@ -9,8 +12,8 @@ class BaseTests(unittest.TestCase):
         result = script.get_env()
         self.assertIsNotNone(result, "Are secrets loaded properly?")
         self.assertEqual(result, "Kassandra")
-    
-    def test_getUN(self):
+
+    def test_get_un(self):
         '''
         Checking Doppler trick for referencing secrets
         '''
